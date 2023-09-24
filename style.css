@@ -1,0 +1,132 @@
+/*
+Theme Name: Mi Afiliado Amazon
+Author: GhostA1
+Description: Tema personalizado para afiliados de Amazon.
+Version: 1.2.1
+*/
+
+/* Reset básico y configuraciones globales */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --text-color: #333;
+  --link-color: #007BFF;
+  --link-hover-color: #0056b3;
+  --background-color: #f8f9fa;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--link-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--link-hover-color);
+}
+
+.logo-header img {
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.categorias-destacadas {
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.categoria {
+  text-align: center;
+  flex: 0 0 calc(20% - 20px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.categoria:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.categoria img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.menu-item-has-children {
+  position: relative;
+  cursor: pointer;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+  min-width: 200px; /* Define un ancho mínimo para el submenú */
+}
+
+.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+
+.subcategorias {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.subcategoria {
+  margin: 0 15px 10px 0;
+}
